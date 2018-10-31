@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 5</title>
+</head>
+
+<body>
+
+ So met can doi <input type="text" id="num"/>
+<input  type="button"  value="Enter" onclick="Swap()"  "/>
+<script>
+function Swap(){
+    var num = document.getElementById("num").value;
+    num1 = num*3.2808;
+    alert(num + 'met chuyen sang feet la ' + num1);
+    
+}
+</script>
+</body>
+</html>
