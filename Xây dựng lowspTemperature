@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+
+<script>
+var Temp = function(temp){
+    this.getTemp() = function(){
+        return temp ;
+    }
+    this.changeTempCF()=function(){
+        var newT = temp * 3.28 ;
+        return newT ;
+    }
+}
+var tem = new Temp(30);
+var te = tem.getTemp();
+var cf = tem.changeTempCF();
+alert ( cf);
+alert(te);
+</script>
+
+</body>
+</html>
