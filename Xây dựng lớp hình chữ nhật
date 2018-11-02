@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+
+<script>
+var HCN = function (dai , rong ){
+    this.chuvi= function (){
+        return 2*dai+2*rong;
+    }
+    this.dientich = function (){
+        return dai*rong ;
+    }
+}
+var hcn = new HCN ( 3 , 5 );
+var chuvi = hcn.chuvi();
+var dientich = hcn.dientich();
+alert (chuvi);
+alert(dientich);
+</script>
+
+</body>
+</html>
