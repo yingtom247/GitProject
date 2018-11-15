@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+
+<div id="test">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span>
+        <span></span>
+        <span></span>
+        <span></span>                
+    </span>
+    <span></span>
+</div>
+<a href="#" onclick="alert(getCount(document.getElementById('test'), false));">Simple Count of Children</a> (Should result in 5)<br/>
+<a href="#" onclick="alert(getCount(document.getElementById('test'), true));">Count Inner Children</a> (Should result in 8)
+<script>
+window.getCount = function(parent, getChildrensChildren){
+    var relevantChildren = 0;
+    var children = parent.childNodes.length;
+    for(var i=0; i < children; i++){
+        if(parent.childNodes[i].nodeType != 3){
+            if(getChildrensChildren)
+                relevantChildren += getCount(parent.childNodes[i],true);
+            relevantChildren++;
+        }
+    }
+    return relevantChildren;
+}
+</script>
+
+</body>
+</html>
