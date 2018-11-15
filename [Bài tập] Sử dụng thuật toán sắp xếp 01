@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+
+	<title>Untitled 1</title>
+</head>
+
+<body>
+<script>
+
+function CArray(numElements) {
+    this.dataStore = [];
+    this.pos = 0;
+    this.numElements = numElements;
+    this.insert = insert;
+    this.toString = toString;
+    this.clear = clear;
+    this.setData = setData;
+    this.swap = swap;
+    for (var i = 0; i < numElements; ++i) {
+        this.dataStore[i] = i;
+    }
+    this.selectionnSort = selectionSort;
+}
+// Xây dựng phương thức selectionSort() thực hiện thuật toán sắp xếp chèn
+
+function selectionSort() {
+    var min, temp;
+    for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
+        min = outer;
+        for (var inner = outer + 1; inner <= this.dataStore.length - 1; ++inner) {
+            if (this.dataStore[inner] < this.dataStore[min]) {
+                min = inner;
+            }
+        }
+        swap(this.dataStore, outer, min);
+        document.write(this.toString());
+    }
+}
+// Sử dụng lớp CArray tạo mảng gồm 100 các phần tử.
+
+var numElements = 10000;
+var myNums = new CArray(numElements);
+myNums.setData();
+// Gọi hàm sắp xếp chèn
+
+mynums.selectionSort ();
+ 
+// In mảng sau khi sắp xếp
+
+document.write(“<br/>”);
+document.write(mynums.toString());
+</script>
+</body>
+</html>
